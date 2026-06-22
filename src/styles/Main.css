@@ -1,0 +1,817 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+ *
+
+
+/* ------------------------------------------------------------------------ */
+
+.login-container{
+  min-height:80vh;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.login-card{
+  width:400px;
+
+  background:white;
+
+  padding:40px;
+
+  border-radius:15px;
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,.1);
+}
+
+.login-card h2{
+  margin-bottom:25px;
+  text-align:center;
+}
+
+.login-card input{
+  width:100%;
+  padding:12px;
+  margin-bottom:15px;
+}
+
+.login-card button{
+  width:100%;
+  padding:12px;
+
+  background:#2563eb;
+  color:white;
+
+  border:none;
+  border-radius:8px;
+}
+
+.page-container{
+  max-width:1200px;
+  margin:60px auto;
+  padding:20px;
+}
+
+.upload-card{
+  background:white;
+  padding:30px;
+  border-radius:12px;
+}
+
+.search-box{
+  width:100%;
+  padding:15px;
+  margin:20px 0;
+}
+
+.table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+.table th,
+.table td{
+  border:1px solid #ddd;
+  padding:15px;
+}
+
+/* --------------------------------------------------------------------------- */
+
+.file-table{
+  width:90%;
+  margin:30px auto;
+  border-collapse:collapse;
+  background:white;
+  box-shadow:0 4px 20px rgba(0,0,0,.08);
+}
+
+.file-table th,
+.file-table td{
+  border:1px solid #ddd;
+  padding:14px;
+  text-align:left;
+}
+
+.file-table th{
+  background:#2563eb;
+  color:white;
+}
+
+.file-table tr:hover{
+  background:#f5f5f5;
+}
+/* --------------------Cloud.css--------------------------- */
+.page-container{
+  width:95%;
+  max-width:1400px;
+  margin:40px auto;
+}
+
+.page-container h1{
+  color:#0f172a;
+  margin-bottom:40px;
+}
+
+.dashboard-subtitle{
+  color:#64748b;
+  margin-bottom:30px;
+}
+
+.file-table{
+  width:100%;
+  border-collapse:collapse;
+  background:white;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 5px 25px rgba(0,0,0,.08);
+}
+
+.file-table th{
+  background:#2563eb;
+  color:white;
+  padding:15px;
+}
+
+.file-table td{
+  padding:25px;
+  border-bottom:1px solid #e5e7eb;
+}
+
+.file-table tr:hover{
+  background:#f8fafc;
+}
+/* ------------------searchDocument.css-------------------- */
+.search-box{
+  display:flex;
+  gap:15px;
+  margin-bottom:30px;
+}
+
+.search-box input{
+  flex:1;
+  padding:12px;
+  border:1px solid #ddd;
+  border-radius:8px;
+}
+
+.search-box button{
+  padding:12px 25px;
+  background:#2563eb;
+  color:white;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+/* ----------------------------uploaddocument----------------------------- */
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f6fa;
+}
+
+.page-container {
+  padding: 20px;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  padding: 10px 15px;
+  background: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0f5bd1;
+}
+
+.file-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.file-table th {
+  background: #1a73e8;
+  color: white;
+  padding: 12px;
+}
+
+.file-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.file-table tr:hover {
+  background: #f1f3f4;
+}
+
+a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+/* --------------------ADD GLOBAL STYLE (main.css)---------------------------- */
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f6fa;
+}
+
+.page-container {
+  padding: 20px;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  padding: 10px 15px;
+  background: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0f5bd1;
+}
+
+.file-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.file-table th {
+  background: #1a73e8;
+  color: white;
+  padding: 12px;
+}
+
+.file-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.file-table tr:hover {
+  background: #f1f3f4;
+}
+
+a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+/* ---------------------------------herosection-------------------------------- */
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px;
+  min-height: 80vh;
+  background: linear-gradient(135deg, #e0f7ff, #f5faff);
+}
+
+.hero-left {
+  width: 50%;
+}
+
+.hero-left h1 {
+  font-size: 42px;
+  color: #1a237e;
+  margin-bottom: 20px;
+}
+
+.hero-left p {
+  font-size: 18px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.hero-buttons button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.hero-buttons button:hover {
+  background: #0d47a1;
+}
+
+.hero-right {
+  width: 40%;
+}
+
+.login-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #1a237e;
+}
+/* -------------------------BASIC CSS (GIVES GOOGLE DRIVE FEEL)------------- */
+.dashboard {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  background: #1f2937;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background: #f3f4f6;
+}
+
+.logout-btn {
+  margin-top: auto;
+  background: red;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+/* ------------------dashboard.css--------------------------- */
+.sidebar a {
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  margin: 5px 0;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background: #e0e0e0;
+}
+
+.sidebar a.active {
+  background: #1976d2;
+  color: white;
+  font-weight: bold;
+}
+.dashboard-layout {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 240px;
+  background: #0f172a;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sidebar a {
+  color: #cbd5e1;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.sidebar a:hover {
+  background: #1e293b;
+}
+
+.active-link {
+  background: #2563eb;
+  color: white !important;
+}
+
+/* MAIN */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background: #f1f5f9;
+}
+
+/* LOGO */
+.logo {
+  margin-bottom: 20px;
+}
+
+/* ROLE BOX */
+.role-box {
+  margin-top: auto;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+/* LOGOUT */
+.logout-btn {
+  margin-top: 10px;
+  padding: 10px;
+  background: red;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+}
+/* --------------------herosection---------------- */
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px;
+  min-height: 80vh;
+}
+
+.hero-left {
+  flex: 1;
+}
+
+.hero-left h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.hero-left p {
+  font-size: 16px;
+  color: #555;
+  max-width: 500px;
+}
+
+/* REGISTER BUTTON */
+.register-btn {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* RIGHT SIDE CARDS */
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  width: 220px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+/* ----------------------------------------------cloud.css----------------------- */
+/* BACK BUTTON */
+.back-btn {
+  padding: 10px 14px;
+  margin-bottom: 15px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.back-btn:hover {
+  background: #1e40af;
+}
+
+/* TABLE FILE LINK */
+.file-link {
+  cursor: pointer;
+  color: #2563eb;
+  font-weight: 500;
+}
+
+.file-link:hover {
+  text-decoration: underline;
+}
+
+/* MODAL OVERLAY */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* MODAL BOX */
+.modal-box {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  animation: pop 0.2s ease-in-out;
+}
+
+/* ANIMATION */
+@keyframes pop {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+  margin-top: 15px;
+  padding: 8px 12px;
+  border: none;
+  background: red;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background: darkred;
+}
+
+/* APP LAYOUT */
+.drive-app {
+  display: flex;
+  height: 100vh;
+  font-family: Arial;
+}
+
+/* SIDEBAR */
+.drive-sidebar {
+  width: 220px;
+  background: #111827;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.drive-sidebar button {
+  padding: 10px;
+  border: none;
+  background: #1f2937;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.drive-sidebar button:hover {
+  background: #374151;
+}
+
+/* MAIN AREA */
+.drive-main {
+  flex: 1;
+  background: #f9fafb;
+  padding: 20px;
+}
+
+/* TOP BAR */
+.drive-topbar {
+  margin-bottom: 20px;
+}
+
+.drive-search {
+  width: 300px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* GRID */
+.drive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 15px;
+}
+
+/* FILE CARD */
+.drive-card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
+  border: 1px solid #e5e7eb;
+}
+
+.drive-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.drive-icon {
+  font-size: 30px;
+}
+
+.drive-name {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.drive-date {
+  font-size: 12px;
+  color: gray;
+  margin-top: 5px;
+}
+
+/* MODAL */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-box {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+}
+
+.close-btn {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+/* APP. CSS------------------------------------- */
+/* DARK MODE */
+.dark-mode {
+  background-color: #0f172a;
+  color: white;
+}
+
+/* DARK MODE FIX FOR DASHBOARD */
+.dark-mode .sidebar {
+  background: #111827;
+}
+
+.dark-mode .main-content {
+  background: #0f172a;
+}
+
+/* TOGGLE BUTTON */
+.dark-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 9999;
+}
+/* -----------------------dashboardanalytics-------------- */
+.analytics-container {
+  padding: 20px;
+}
+
+.chart-box {
+  background: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+
+
+
+
+
+.context-menu {
+  position: fixed;
+  background: white;
+  min-width: 180px;
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 9999;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.context-menu div {
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.context-menu div:hover {
+  background: #f3f4f6;
+}
+/* ------------------------------------------------HOME-------------------------- */
+@media (max-width:768px) {
+  .container{
+    padding:20px;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  h1{
+    font-size:2rem;
+  }
+
+  .btn-group{
+    flex-direction:column;
+  }
+}
