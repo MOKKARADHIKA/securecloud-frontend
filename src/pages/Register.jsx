@@ -14,7 +14,7 @@ function Register() {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/api/auth/register", {
+      await axios.post("https://securecloud-backend.vercel.app", {
         name,
         email,
         password,

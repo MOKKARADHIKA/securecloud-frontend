@@ -15,7 +15,7 @@ const role = localStorage.getItem("role");
   
 
   fetch(
-    "http://localhost:5000/api/files/all-files",
+    "https://securecloud-backend.vercel.app",
     {
       headers: {
         Authorization: token,
@@ -59,7 +59,7 @@ const role = localStorage.getItem("role");
 
   try {
     const res = await fetch(
-  `http://localhost:5000/api/files/rename/${menu.file._id}`,
+  `https://securecloud-backend.vercel.app`,
   {
     method: "PUT",
     headers: {
@@ -101,7 +101,7 @@ const role = localStorage.getItem("role");
 
   try {
     const res = await fetch(
-      `http://localhost:5000/api/files/delete/${menu.file._id}`,
+      `https://securecloud-backend.vercel.app`,
       {
         method: "DELETE",
         headers: {
@@ -138,7 +138,7 @@ const handleDownload = async () => {
     const token = localStorage.getItem("token");
 
     const res = await fetch(
-      `http://localhost:5000/api/files/download/${storedFileName}`,
+      `https://securecloud-backend.vercel.app`,
       {
         headers: {
           Authorization: token,

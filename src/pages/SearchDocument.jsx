@@ -54,7 +54,7 @@ function SearchDocument() {
       const token = localStorage.getItem("token");
 
       const res = await fetch(
-        `http://localhost:5000/api/files/search?keyword=${keyword}`,
+        `https://securecloud-backend.vercel.app`,
         {
           headers: {
             Authorization: token,
