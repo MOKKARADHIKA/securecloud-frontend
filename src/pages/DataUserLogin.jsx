@@ -11,7 +11,7 @@ function DataUserLogin() {
 
   const handleLogin = async () => {
     try {
-      const res = await fetch("https://securecloud-backend.vercel.app", {
+      const res = await fetch("https://securecloud-backend.vercel.app/api/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

@@ -22,15 +22,30 @@ function DataOwnerLogin() {
 
   const handleLogin = async () => {
     try {
-      const res = await fetch("https://securecloud-backend.vercel.app", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          email: username,
-          password,
-          role: "DATA_OWNER",
-        }),
-      });
+      // const res = await fetch("https://securecloud-backend.vercel.app", {
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/json" },
+      //   body: JSON.stringify({
+      //     email: username,
+      //     password,
+      //     role: "DATA_OWNER",
+      //   }),
+      // });
+
+      const res = await fetch(
+  "https://securecloud-backend.vercel.app/api/auth/login",
+  {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      email: username,
+      password,
+      role: "DATA_OWNER",
+    }),
+  }
+);
 
       const data = await res.json();
 
