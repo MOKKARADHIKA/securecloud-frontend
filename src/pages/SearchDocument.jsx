@@ -11,10 +11,10 @@ function SearchDocument() {
       const token = localStorage.getItem("token");
 
       const res = await fetch(
-        `https://securecloud-backend.vercel.app/api/files/download/${storedFileName}`,
+        `http://securecloud-backend.vercel.app/api/files/download/${storedFileName}`,
         {
           headers: {
-            Authorization: token,
+            Authorization: `Bearer ${token}`,
           },
         }
       );
@@ -57,8 +57,8 @@ function SearchDocument() {
         `https://securecloud-backend.vercel.app/api/files/search?keyword=${keyword}`,
         {
           headers: {
-            Authorization: token,
-          },
+  Authorization: `Bearer ${token}`,
+},
         }
       );
 
@@ -128,10 +128,10 @@ function SearchDocument() {
                 <td>
                   <button
                     onClick={() =>
-                      handleDownload(
-                        file.filePath?.split("\\").pop(),
-                        file.fileName
-                      )
+                     handleDownload(
+  file.storedFileName,
+  file.fileName
+)
                     }
                   >
                     Download

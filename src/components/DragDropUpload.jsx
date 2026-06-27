@@ -19,6 +19,8 @@ function DragDropUpload() {
     noKeyboard: false,
   });
 
+  
+
   const handleUpload = async () => {
     if (!file) {
       alert("Please select a file");
@@ -31,12 +33,13 @@ function DragDropUpload() {
 
     try {
       await axios.post(
-        "https://securecloud-backend.vercel.app/api/files/upload",
+        // "https://securecloud-backend.vercel.app/api/files/upload",
+         "http://localhost:5001/api/files/upload",
         formData,
         {
           headers: {
             "Content-Type": "multipart/form-data",
-            Authorization: localStorage.getItem("token"),
+             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
         }
       );
@@ -50,9 +53,16 @@ function DragDropUpload() {
       navigate("/dashboard/cloud");
 
     } catch (err) {
-      console.log(err);
-      alert("Upload failed");
-    }
+  console.log("FULL ERROR:", err);
+
+  if (err.response) {
+    console.log("STATUS:", err.response.status);
+    console.log("DATA:", err.response.data);
+    alert(JSON.stringify(err.response.data));
+  } else {
+    alert(err.message);
+  }
+}
   };
 
   return (

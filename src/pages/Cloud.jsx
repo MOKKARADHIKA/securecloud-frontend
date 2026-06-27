@@ -18,7 +18,7 @@ const role = localStorage.getItem("role");
     "https://securecloud-backend.vercel.app/api/files/all-files",
     {
       headers: {
-        Authorization: token,
+       Authorization: `Bearer ${token}`,
       },
     }
   )
@@ -64,7 +64,7 @@ const role = localStorage.getItem("role");
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
-      Authorization: localStorage.getItem("token"),
+     Authorization: `Bearer ${localStorage.getItem("token")}`,
     },
     body: JSON.stringify({
       newName,
@@ -105,8 +105,8 @@ const role = localStorage.getItem("role");
       {
         method: "DELETE",
         headers: {
-          Authorization:
-            localStorage.getItem("token"),
+        
+           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
       }
     );
@@ -141,7 +141,7 @@ const handleDownload = async () => {
       `https://securecloud-backend.vercel.app/api/files/download/${storedFileName}`,
       {
         headers: {
-          Authorization: token,
+        Authorization: `Bearer ${token}`,
         },
       }
     );

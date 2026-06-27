@@ -38,12 +38,13 @@ function DataOwnerLogin() {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      "Accept": "application/json"
     },
     body: JSON.stringify({
       email: username,
-      password,
-      role: "DATA_OWNER",
-    }),
+      password: password,
+      role: "DATA_OWNER"
+    })
   }
 );
 
