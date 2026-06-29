@@ -34,7 +34,7 @@ function DragDropUpload() {
     try {
       await axios.post(
         // "https://securecloud-backend.vercel.app/api/files/upload",
-         "http://localhost:5001/api/files/upload",
+         "https://securecloud-backend.vercel.app/api/files/upload",
         formData,
         {
           headers: {
