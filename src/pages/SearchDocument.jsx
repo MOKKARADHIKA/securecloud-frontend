@@ -6,40 +6,111 @@ function SearchDocument() {
   const [loading, setLoading] = useState(false);
 
   // ✅ DOWNLOAD FUNCTION (correct scope)
-  const handleDownload = async (storedFileName, fileName) => {
-    try {
-      const token = localStorage.getItem("token");
 
-      const res = await fetch(
-        `https://securecloud-backend.vercel.app/api/files/download/${storedFileName}`,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
+//  const handleDownload = async (fileId) => {
+//   try {
+//     const token = localStorage.getItem("token");
 
-      if (!res.ok) {
-        throw new Error("Download failed");
+//     const res = await fetch(
+//       `https://securecloud-backend.vercel.app/api/files/download/${fileId}`,
+//       {
+//         method: "GET",
+//         headers: {
+//           Authorization: `Bearer ${token}`,
+//         },
+//       }
+//     );
+
+//     if (!res.ok) {
+//       throw new Error("Download request failed");
+//     }
+
+//     const data = await res.json();
+
+//     console.log("Download API response:", data); // 🔥 IMPORTANT DEBUG
+
+//     const url = data.url || data.fileUrl || data.downloadUrl;
+
+//     if (!url) {
+//       alert("No download URL returned from backend");
+//       return;
+//     }
+
+//   window.open(data.downloadUrl, "_blank");
+
+//   } catch (err) {
+//     console.error(err);
+//     alert("Download failed");
+//   }
+// };
+
+// const handleDownload = async (fileId) => {
+//   try {
+//     const token = localStorage.getItem("token");
+
+//     const res = await fetch(
+//       `https://securecloud-backend.vercel.app/api/files/download/${fileId}`,
+//       {
+//         method: "GET",
+//         headers: {
+//           Authorization: `Bearer ${token}`,
+//         },
+//       }
+//     );
+
+//     const data = await res.json();
+
+//     console.log("Download response:", data);
+
+//     if (!data.success) {
+//       alert("Download failed");
+//       return;
+//     }
+
+//     // Open Cloudinary file directly
+//  window.open(data.downloadUrl + "?download=1", "_blank");
+
+//   } catch (err) {
+//     console.error(err);
+//     alert("Download failed");
+//   }
+// };
+
+
+const handleDownload = async (fileId) => {
+  try {
+    const token = localStorage.getItem("token");
+
+    const res = await fetch(
+      `https://securecloud-backend.vercel.app/api/files/download/${fileId}`,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
       }
+    );
 
-      const blob = await res.blob();
-      const url = window.URL.createObjectURL(blob);
+    const data = await res.json();
 
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = fileName;
+    const fileRes = await fetch(data.downloadUrl);
+    const blob = await fileRes.blob();
 
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
+    const url = window.URL.createObjectURL(blob);
 
-      window.URL.revokeObjectURL(url);
-    } catch (err) {
-      console.log(err);
-      alert("Download failed");
-    }
-  };
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "file.pdf"; // you can use real filename
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+
+    window.URL.revokeObjectURL(url);
+
+  } catch (err) {
+    console.error(err);
+  }
+};
+
 
   // ✅ SEARCH FUNCTION
   const handleSearch = async () => {
@@ -128,8 +199,8 @@ function SearchDocument() {
                 <td>
                   <button
                     onClick={() =>
-                     handleDownload(
-  file.storedFileName,
+                    handleDownload(
+  file._id,
   file.fileName
 )
                     }

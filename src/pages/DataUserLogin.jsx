@@ -24,6 +24,7 @@ function DataUserLogin() {
       });
 
       const data = await res.json();
+      console.log("LOGIN RESPONSE:", data); // 👈 ADD HERE
 
       // ❌ LOGIN FAILED
       if (!res.ok) {
